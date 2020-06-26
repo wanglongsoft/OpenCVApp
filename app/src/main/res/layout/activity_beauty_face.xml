@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".BeautyFaceActivity">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <Button
+        android:id="@+id/button_src_img"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="原图显示"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_integral_blur"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="积分图模糊"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_66"
+        app:layout_constraintTop_toTopOf="@+id/button_mean_square" />
+
+    <Button
+        android:id="@+id/button_mean_square"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="均方差滤波"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_66"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_33"
+        app:layout_constraintTop_toTopOf="@+id/button_src_img" />
+
+    <Button
+        android:id="@+id/button_gauss_weight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="高斯权重融合"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_edge_lift" />
+
+    <Button
+        android:id="@+id/button_edge_lift"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="边缘提升"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_66"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_33"
+        app:layout_constraintTop_toTopOf="@+id/button_beauty_face" />
+
+    <Button
+        android:id="@+id/button_beauty_face"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="人脸美化"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_66"
+        app:layout_constraintTop_toBottomOf="@+id/button_integral_blur" />
+
+    <ImageView
+        android:id="@+id/src_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_beauty_face" />
+</androidx.constraintlayout.widget.ConstraintLayout>

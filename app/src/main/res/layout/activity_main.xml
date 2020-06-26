@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:fitsSystemWindows="true">
+
+    <Button
+        android:id="@+id/button_mat_operation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Mat对象基本操作"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/button_mat_pixel_operation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Mat像素操作"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_mat_operation" />
+    <Button
+        android:id="@+id/button_mat_convolution_operation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Mat卷积操作"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_mat_pixel_operation" />
+    <Button
+        android:id="@+id/button_feature_detection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="特征检测与匹配"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_mat_convolution_operation" />
+    <Button
+        android:id="@+id/button_face_beauty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="人脸美化"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_feature_detection" />
+    <Button
+        android:id="@+id/button_face_detection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="人脸识别"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_face_beauty" />
+</androidx.constraintlayout.widget.ConstraintLayout>

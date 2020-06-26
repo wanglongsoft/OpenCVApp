@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MatPixelActivity">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <Button
+        android:id="@+id/button_src_img"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="原图显示"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_bright_img"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="调整亮度显示"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_66"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_33"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_contrast_img"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="调整对比度显示"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_66"
+        app:layout_constraintTop_toTopOf="@+id/button_bright_img" />
+
+    <Button
+        android:id="@+id/button_pixel_not"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="像素值取反"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_src_img" />
+
+    <Button
+        android:id="@+id/button_normal_img"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="归一化显示"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_66"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_33"
+        app:layout_constraintTop_toBottomOf="@+id/button_src_img" />
+
+
+    <Button
+        android:id="@+id/button_binarization_img"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="二值化显示"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_66"
+        app:layout_constraintTop_toBottomOf="@+id/button_src_img" />
+
+    <ImageView
+        android:id="@+id/src_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_pixel_not" />
+</androidx.constraintlayout.widget.ConstraintLayout>
